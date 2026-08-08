@@ -36,15 +36,18 @@ It is a solution to the **"Mortal Fibonacci Rabbits"** Rosalind problem **(ID: F
 3. For each month `i` from 3 to `n`, it adds last month's pairs plus the new pairs born to pairs that were already mature two months ago, then subtracts whichever pairs turn age `m` and die that month
 4. Finally, it prints the total number of surviving rabbit pairs after `n` months
 
-**Worked example** (n=6, m=3):
-```
-Month:   0  1  2  3  4  5  6
-Pairs:   1  1  1  2  2  3  4
-```
-- Month 3: 1 (month 2) + 1 (month 1) - 0 died = 2
-- Month 4: 2 (month 3) + 1 (month 2) - 1 died (the original pair reaches age 3) = 2
-- Month 5: 2 (month 4) + 2 (month 3) - 1 died = 3
-- Month 6: 3 (month 5) + 2 (month 4) - 1 died = 4
+**Equation**
+Original equation is F(n)=F(n-1)+F(n-2), but we will be using modified equation because we have n - the total number of months that population is living, and m - how many months each individual pair lives.
+Rule: **F(n) = F(n-1) + F(n-2) − F(n-m-1)**.
+I will use this **input** (n=6, m=3) as an example.
+
+F(0)=1
+F(1)=1
+F(2)=1
+F(3)=F(2)+F(1)=2
+F(4)=F(3)+F(2)-F(0)=2, because first pair died
+F(5)=F(4)+F(3)-F(1)=3
+**F(6)=F(5)+F(4)-F(2)=4**
 
 ---
 
