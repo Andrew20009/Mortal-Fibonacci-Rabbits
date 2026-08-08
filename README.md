@@ -37,9 +37,9 @@ It is a solution to the **"Mortal Fibonacci Rabbits"** Rosalind problem **(ID: F
 4. Finally, it prints the total number of surviving rabbit pairs after `n` months
 
 
-**Equation**
+## Equation
 
-Original equation is F(n)=F(n-1)+F(n-2), but we will be using modified equation because we have n - the total number of months that population is living, and m - how many months each individual pair lives.
+  Original equation is F(n)=F(n-1)+F(n-2), but we will be using modified equation because we have n - the total number of months that population is living, and m - how many months each individual pair lives.
 
 Rule: **F(n) = F(n-1) + F(n-2) − F(n-m-1)**.
 
